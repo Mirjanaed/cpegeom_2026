@@ -1,186 +1,152 @@
 # Guide utilisateur  
 ## Sources de données – TADAO
 
-Ce document présente les différentes sources de données utilisées dans le cadre des projets SIG et géomatiques du réseau TADAO (Artois Mobilités).
+Ce module présente les différentes sources de données utilisées dans les projets SIG du réseau TADAO (Artois Mobilités).
 
-Chaque sous-section correspond à une source de données exploitable dans les projets cartographiques, analyses spatiales et applications web.
+Chaque section correspond à un onglet du site.
 
 ---
 
-## 1. Base GTFS (General Transit Feed Specification)
+# La page des projets  
+## Base GTFS (General Transit Feed Specification)
 
 ### Description
-La base GTFS contient l’ensemble des données théoriques du réseau de transport :
-- Lignes
-- Arrêts
-- Horaires planifiés
-- Calendriers de circulation
-- Correspondances
+La base GTFS constitue la donnée principale du réseau de transport.  
+Elle contient :
+
+- routes.txt → lignes commerciales
+- stops.txt → arrêts
+- trips.txt → trajets
+- stop_times.txt → horaires théoriques
+- calendar.txt → jours de circulation
 
 ### Format
-- Fichiers texte (.txt)
-- Structuration normalisée (stops.txt, routes.txt, trips.txt, stop_times.txt…)
+Fichiers texte normalisés (.txt) regroupés dans une archive .zip.
 
-### Usage
-- Intégration dans SIG (QGIS / ArcGIS)
-- Analyse d’accessibilité
+### Utilisation chez TADAO
 - Cartographie des lignes
-- Développement d’applications web de mobilité
+- Analyse d’accessibilité
+- Étude des correspondances
+- Intégration dans QGIS / PostGIS
+- Développement d’applications web mobilité
 
-### Fréquence de mise à jour
-Selon les changements d’offre (nouveaux horaires, nouvelles lignes, adaptations saisonnières)
+### Mise à jour
+À chaque modification d’offre (nouvelle ligne, ajustement horaire).
 
 ---
 
-## 2. Données OpenStreetMap (OSM)
+# L’authentification  
+## Données OpenStreetMap (OSM)
 
 ### Description
-Base de données géographique collaborative utilisée pour :
+Base de données géographique collaborative mondiale utilisée comme fond cartographique et réseau viaire.
+
+### Contenu exploité
 - Voirie
 - Bâtiments
 - Points d’intérêt
-- Réseau routier
+- Réseau cyclable
+- Réseau piéton
 
 ### Format
 - .osm
 - .pbf
-- Shapefile après extraction
+- Export en Shapefile ou GeoJSON
 
-### Usage
-- Fond cartographique
-- Analyse réseau (isochrones, calcul d’itinéraire)
-- Croisement avec les lignes TADAO
+### Utilisation chez TADAO
+- Fond cartographique web
+- Calcul d’itinéraires
+- Analyse réseau
+- Isochrones
+- Croisement avec les tracés GTFS
 
 ### Source
 https://www.openstreetmap.org
 
 ---
 
-# 3. Données IGN (BD TOPO / BD ORTHO)
+# Une carte simple  
+## Données IGN (BD TOPO / BD ORTHO)
 
-## Description
-Données de référence produites par l’IGN :
-- Réseau routier précis
-- Bâtiments
+### Description
+Données de référence produites par l’Institut national de l’information géographique et forestière.
+
+### Contenu exploité
+- Réseau routier structuré
+- Bâtiments précis
 - Limites administratives
 - Orthophotographies
 
-## Format
+### Format
 - Shapefile
 - GeoPackage
-- WMS/WFS
+- WMS / WFS
 
-## Usage
-- Référentiel spatial officiel
-- Contrôle qualité des données OSM
+### Utilisation chez TADAO
+- Référentiel officiel
 - Production cartographique institutionnelle
-
-## Producteur
-Institut national de l'information géographique et forestière (IGN)
+- Vérification qualité OSM
+- Support aux études territoriales
 
 ---
 
-# 4. Données internes TADAO
+# Analyse avancée  
+## Données internes TADAO
 
-## Description
-Données produites en interne :
+### Description
+Données produites par l’exploitation et le service mobilité.
+
+### Contenu exploité
 - Tracés réels des lignes
-- Localisation des arrêts terrain
-- Données d’exploitation
-- Points de montée/descente
-- Données billettiques (si accessibles)
+- Localisation terrain des arrêts
+- Données de fréquentation
+- Données billettiques
+- Statistiques d’exploitation
 
-## Format
+### Format
 - CSV
 - Excel
 - Base PostgreSQL/PostGIS
-- Shapefile
 
-## Usage
-- Analyse de fréquentation
-- Optimisation de lignes
-- Études de performance réseau
-- Tableaux de bord
+### Utilisation
+- Analyse de performance réseau
+- Optimisation des itinéraires
+- Tableaux de bord décisionnels
 
-## Sensibilité
-Données internes – diffusion restreinte
+### Sensibilité
+Données internes – diffusion restreinte.
 
 ---
 
-# 5. Limites administratives (INSEE / IGN)
+# Base technique  
+## Modèle PostGIS
 
-## Description
-- Communes
-- IRIS
-- EPCI
-- Découpages statistiques
+### Description
+Base de données spatiale centralisée.
 
-## Format
-- Shapefile
-- GeoJSON
-
-## Usage
-- Analyse territoriale
-- Études de couverture réseau
-- Statistiques par commune
-
----
-
-# 6. Données GPS / SAEIV
-
-## Description
-Données issues des véhicules :
-- Position temps réel
-- Retards
-- Temps de parcours réel
-
-## Format
-- API
-- Base SQL
-- Flux temps réel
-
-## Usage
-- Analyse ponctualité
-- Étude vitesse commerciale
-- Optimisation exploitation
-- Cartographie temps réel
-
----
-
-# 7. Modèle de données PostGIS
-
-## Description
-Base de données spatiale centralisée utilisée pour :
-- Stockage des couches SIG
-- Jointures spatiales
-- Requêtes SQL géographiques
-
-## Technologies
+### Technologies
 - PostgreSQL
 - PostGIS
+- Requêtes SQL spatiales
 
-## Usage
-- Backend cartographique
-- API géospatiale
-- Traitement automatique Python
+### Utilisation
+- Stockage des couches SIG
+- Jointures spatiales
+- Backend d’applications cartographiques
+- Scripts Python automatisés
 
 ---
 
-# Architecture du site
+# Architecture du menu
 
 Guide utilisateur  
-└── Sources de données TADAO  
-    ├── GTFS  
-    ├── OSM  
-    ├── IGN  
-    ├── Données internes  
-    ├── Limites administratives  
-    ├── GPS / SAEIV  
-    └── PostGIS  
+├── La page des projets → GTFS  
+├── L’authentification → OpenStreetMap  
+├── Une carte simple → IGN  
+├── Analyse avancée → Données internes  
+└── Base technique → PostGIS  
 
 ---
-
-# Auteur
 
 Service géomatique – TADAO  
 Technicien / Chef de projet en géomatique
