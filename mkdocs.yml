@@ -1,6 +1,11 @@
 site_name : Site de documentation CPGEOM
-theme :
-    name : readthedocs
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+    - navigation.top
     
 site_name: Documentation SIG TADAO
 
