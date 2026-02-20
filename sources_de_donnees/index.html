@@ -56,30 +56,6 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#sources-de-donnees-tadao">Sources de données – TADAO</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#1-base-gtfs-general-transit-feed-specification">1. Base GTFS (General Transit Feed Specification)</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#description">Description</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#format">Format</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#frequence-de-mise-a-jour">Fréquence de mise à jour</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-donnees-openstreetmap-osm">2. Données OpenStreetMap (OSM)</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#description_1">Description</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#format_1">Format</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#usage_1">Usage</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#source">Source</a>
-    </li>
-        </ul>
-    </li>
     </ul>
                 </li>
               </ul>
@@ -108,171 +84,141 @@
               
                 <h1 id="guide-utilisateur">Guide utilisateur</h1>
 <h2 id="sources-de-donnees-tadao">Sources de données – TADAO</h2>
-<p>Ce document présente les différentes sources de données utilisées dans le cadre des projets SIG et géomatiques du réseau TADAO (Artois Mobilités).</p>
-<p>Chaque sous-section correspond à une source de données exploitable dans les projets cartographiques, analyses spatiales et applications web.</p>
+<p>Ce module présente les différentes sources de données utilisées dans les projets SIG du réseau TADAO (Artois Mobilités).</p>
+<p>Chaque section correspond à un onglet du site.</p>
 <hr />
-<h2 id="1-base-gtfs-general-transit-feed-specification">1. Base GTFS (General Transit Feed Specification)</h2>
+<h1 id="la-page-des-projets">La page des projets</h1>
+<h2 id="base-gtfs-general-transit-feed-specification">Base GTFS (General Transit Feed Specification)</h2>
 <h3 id="description">Description</h3>
-<p>La base GTFS contient l’ensemble des données théoriques du réseau de transport :
-- Lignes
-- Arrêts
-- Horaires planifiés
-- Calendriers de circulation
-- Correspondances</p>
+<p>La base GTFS constitue la donnée principale du réseau de transport.<br />
+Elle contient :</p>
+<ul>
+<li>routes.txt → lignes commerciales</li>
+<li>stops.txt → arrêts</li>
+<li>trips.txt → trajets</li>
+<li>stop_times.txt → horaires théoriques</li>
+<li>calendar.txt → jours de circulation</li>
+</ul>
 <h3 id="format">Format</h3>
+<p>Fichiers texte normalisés (.txt) regroupés dans une archive .zip.</p>
+<h3 id="utilisation-chez-tadao">Utilisation chez TADAO</h3>
 <ul>
-<li>Fichiers texte (.txt)</li>
-<li>Structuration normalisée (stops.txt, routes.txt, trips.txt, stop_times.txt…)</li>
-</ul>
-<h3 id="usage">Usage</h3>
-<ul>
-<li>Intégration dans SIG (QGIS / ArcGIS)</li>
-<li>Analyse d’accessibilité</li>
 <li>Cartographie des lignes</li>
-<li>Développement d’applications web de mobilité</li>
+<li>Analyse d’accessibilité</li>
+<li>Étude des correspondances</li>
+<li>Intégration dans QGIS / PostGIS</li>
+<li>Développement d’applications web mobilité</li>
 </ul>
-<h3 id="frequence-de-mise-a-jour">Fréquence de mise à jour</h3>
-<p>Selon les changements d’offre (nouveaux horaires, nouvelles lignes, adaptations saisonnières)</p>
+<h3 id="mise-a-jour">Mise à jour</h3>
+<p>À chaque modification d’offre (nouvelle ligne, ajustement horaire).</p>
 <hr />
-<h2 id="2-donnees-openstreetmap-osm">2. Données OpenStreetMap (OSM)</h2>
+<h1 id="lauthentification">L’authentification</h1>
+<h2 id="donnees-openstreetmap-osm">Données OpenStreetMap (OSM)</h2>
 <h3 id="description_1">Description</h3>
-<p>Base de données géographique collaborative utilisée pour :
-- Voirie
-- Bâtiments
-- Points d’intérêt
-- Réseau routier</p>
+<p>Base de données géographique collaborative mondiale utilisée comme fond cartographique et réseau viaire.</p>
+<h3 id="contenu-exploite">Contenu exploité</h3>
+<ul>
+<li>Voirie</li>
+<li>Bâtiments</li>
+<li>Points d’intérêt</li>
+<li>Réseau cyclable</li>
+<li>Réseau piéton</li>
+</ul>
 <h3 id="format_1">Format</h3>
 <ul>
 <li>.osm</li>
 <li>.pbf</li>
-<li>Shapefile après extraction</li>
+<li>Export en Shapefile ou GeoJSON</li>
 </ul>
-<h3 id="usage_1">Usage</h3>
+<h3 id="utilisation-chez-tadao_1">Utilisation chez TADAO</h3>
 <ul>
-<li>Fond cartographique</li>
-<li>Analyse réseau (isochrones, calcul d’itinéraire)</li>
-<li>Croisement avec les lignes TADAO</li>
+<li>Fond cartographique web</li>
+<li>Calcul d’itinéraires</li>
+<li>Analyse réseau</li>
+<li>Isochrones</li>
+<li>Croisement avec les tracés GTFS</li>
 </ul>
 <h3 id="source">Source</h3>
 <p>https://www.openstreetmap.org</p>
 <hr />
-<h1 id="3-donnees-ign-bd-topo-bd-ortho">3. Données IGN (BD TOPO / BD ORTHO)</h1>
-<h2 id="description_2">Description</h2>
-<p>Données de référence produites par l’IGN :
-- Réseau routier précis
-- Bâtiments
-- Limites administratives
-- Orthophotographies</p>
-<h2 id="format_2">Format</h2>
+<h1 id="une-carte-simple">Une carte simple</h1>
+<h2 id="donnees-ign-bd-topo-bd-ortho">Données IGN (BD TOPO / BD ORTHO)</h2>
+<h3 id="description_2">Description</h3>
+<p>Données de référence produites par l’Institut national de l’information géographique et forestière.</p>
+<h3 id="contenu-exploite_1">Contenu exploité</h3>
+<ul>
+<li>Réseau routier structuré</li>
+<li>Bâtiments précis</li>
+<li>Limites administratives</li>
+<li>Orthophotographies</li>
+</ul>
+<h3 id="format_2">Format</h3>
 <ul>
 <li>Shapefile</li>
 <li>GeoPackage</li>
-<li>WMS/WFS</li>
+<li>WMS / WFS</li>
 </ul>
-<h2 id="usage_2">Usage</h2>
+<h3 id="utilisation-chez-tadao_2">Utilisation chez TADAO</h3>
 <ul>
-<li>Référentiel spatial officiel</li>
-<li>Contrôle qualité des données OSM</li>
+<li>Référentiel officiel</li>
 <li>Production cartographique institutionnelle</li>
+<li>Vérification qualité OSM</li>
+<li>Support aux études territoriales</li>
 </ul>
-<h2 id="producteur">Producteur</h2>
-<p>Institut national de l'information géographique et forestière (IGN)</p>
 <hr />
-<h1 id="4-donnees-internes-tadao">4. Données internes TADAO</h1>
-<h2 id="description_3">Description</h2>
-<p>Données produites en interne :
-- Tracés réels des lignes
-- Localisation des arrêts terrain
-- Données d’exploitation
-- Points de montée/descente
-- Données billettiques (si accessibles)</p>
-<h2 id="format_3">Format</h2>
+<h1 id="analyse-avancee">Analyse avancée</h1>
+<h2 id="donnees-internes-tadao">Données internes TADAO</h2>
+<h3 id="description_3">Description</h3>
+<p>Données produites par l’exploitation et le service mobilité.</p>
+<h3 id="contenu-exploite_2">Contenu exploité</h3>
+<ul>
+<li>Tracés réels des lignes</li>
+<li>Localisation terrain des arrêts</li>
+<li>Données de fréquentation</li>
+<li>Données billettiques</li>
+<li>Statistiques d’exploitation</li>
+</ul>
+<h3 id="format_3">Format</h3>
 <ul>
 <li>CSV</li>
 <li>Excel</li>
 <li>Base PostgreSQL/PostGIS</li>
-<li>Shapefile</li>
 </ul>
-<h2 id="usage_3">Usage</h2>
+<h3 id="utilisation">Utilisation</h3>
 <ul>
-<li>Analyse de fréquentation</li>
-<li>Optimisation de lignes</li>
-<li>Études de performance réseau</li>
-<li>Tableaux de bord</li>
+<li>Analyse de performance réseau</li>
+<li>Optimisation des itinéraires</li>
+<li>Tableaux de bord décisionnels</li>
 </ul>
-<h2 id="sensibilite">Sensibilité</h2>
-<p>Données internes – diffusion restreinte</p>
+<h3 id="sensibilite">Sensibilité</h3>
+<p>Données internes – diffusion restreinte.</p>
 <hr />
-<h1 id="5-limites-administratives-insee-ign">5. Limites administratives (INSEE / IGN)</h1>
-<h2 id="description_4">Description</h2>
-<ul>
-<li>Communes</li>
-<li>IRIS</li>
-<li>EPCI</li>
-<li>Découpages statistiques</li>
-</ul>
-<h2 id="format_4">Format</h2>
-<ul>
-<li>Shapefile</li>
-<li>GeoJSON</li>
-</ul>
-<h2 id="usage_4">Usage</h2>
-<ul>
-<li>Analyse territoriale</li>
-<li>Études de couverture réseau</li>
-<li>Statistiques par commune</li>
-</ul>
-<hr />
-<h1 id="6-donnees-gps-saeiv">6. Données GPS / SAEIV</h1>
-<h2 id="description_5">Description</h2>
-<p>Données issues des véhicules :
-- Position temps réel
-- Retards
-- Temps de parcours réel</p>
-<h2 id="format_5">Format</h2>
-<ul>
-<li>API</li>
-<li>Base SQL</li>
-<li>Flux temps réel</li>
-</ul>
-<h2 id="usage_5">Usage</h2>
-<ul>
-<li>Analyse ponctualité</li>
-<li>Étude vitesse commerciale</li>
-<li>Optimisation exploitation</li>
-<li>Cartographie temps réel</li>
-</ul>
-<hr />
-<h1 id="7-modele-de-donnees-postgis">7. Modèle de données PostGIS</h1>
-<h2 id="description_6">Description</h2>
-<p>Base de données spatiale centralisée utilisée pour :
-- Stockage des couches SIG
-- Jointures spatiales
-- Requêtes SQL géographiques</p>
-<h2 id="technologies">Technologies</h2>
+<h1 id="base-technique">Base technique</h1>
+<h2 id="modele-postgis">Modèle PostGIS</h2>
+<h3 id="description_4">Description</h3>
+<p>Base de données spatiale centralisée.</p>
+<h3 id="technologies">Technologies</h3>
 <ul>
 <li>PostgreSQL</li>
 <li>PostGIS</li>
+<li>Requêtes SQL spatiales</li>
 </ul>
-<h2 id="usage_6">Usage</h2>
+<h3 id="utilisation_1">Utilisation</h3>
 <ul>
-<li>Backend cartographique</li>
-<li>API géospatiale</li>
-<li>Traitement automatique Python</li>
+<li>Stockage des couches SIG</li>
+<li>Jointures spatiales</li>
+<li>Backend d’applications cartographiques</li>
+<li>Scripts Python automatisés</li>
 </ul>
 <hr />
-<h1 id="architecture-du-site">Architecture du site</h1>
+<h1 id="architecture-du-menu">Architecture du menu</h1>
 <p>Guide utilisateur<br />
-└── Sources de données TADAO<br />
-    ├── GTFS<br />
-    ├── OSM<br />
-    ├── IGN<br />
-    ├── Données internes<br />
-    ├── Limites administratives<br />
-    ├── GPS / SAEIV<br />
-    └── PostGIS  </p>
+├── La page des projets → GTFS<br />
+├── L’authentification → OpenStreetMap<br />
+├── Une carte simple → IGN<br />
+├── Analyse avancée → Données internes<br />
+└── Base technique → PostGIS  </p>
 <hr />
-<h1 id="auteur">Auteur</h1>
 <p>Service géomatique – TADAO<br />
 Technicien / Chef de projet en géomatique</p>
               
