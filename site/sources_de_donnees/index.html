@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Guide utilisateur - Site de documentation CPGEOM</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Guide utilisateur";
+        var mkdocs_page_input_path = "sources_de_donnees.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Site de documentation CPGEOM
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Acceuil de mon site super cool</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../bd_topo/">Bd topo</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ign/">Présentation</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Guide utilisateur</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#sources-de-donnees-tadao">Sources de données – TADAO</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Site de documentation CPGEOM</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Guide utilisateur</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="guide-utilisateur">Guide utilisateur</h1>
+<h2 id="sources-de-donnees-tadao">Sources de données – TADAO</h2>
+<p>Ce document présente les différentes sources de données utilisées dans le cadre des projets SIG et géomatiques du réseau TADAO (Artois Mobilités).</p>
+<p>Chaque sous-section correspond à une source de données exploitable dans les projets cartographiques, analyses spatiales et applications web.</p>
+<hr />
+<h1 id="1-base-gtfs-general-transit-feed-specification">1. Base GTFS (General Transit Feed Specification)</h1>
+<h2 id="description">Description</h2>
+<p>La base GTFS contient l’ensemble des données théoriques du réseau de transport :
+- Lignes
+- Arrêts
+- Horaires planifiés
+- Calendriers de circulation
+- Correspondances</p>
+<h2 id="format">Format</h2>
+<ul>
+<li>Fichiers texte (.txt)</li>
+<li>Structuration normalisée (stops.txt, routes.txt, trips.txt, stop_times.txt…)</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<ul>
+<li>Intégration dans SIG (QGIS / ArcGIS)</li>
+<li>Analyse d’accessibilité</li>
+<li>Cartographie des lignes</li>
+<li>Développement d’applications web de mobilité</li>
+</ul>
+<h2 id="frequence-de-mise-a-jour">Fréquence de mise à jour</h2>
+<p>Selon les changements d’offre (nouveaux horaires, nouvelles lignes, adaptations saisonnières)</p>
+<hr />
+<h1 id="2-donnees-openstreetmap-osm">2. Données OpenStreetMap (OSM)</h1>
+<h2 id="description_1">Description</h2>
+<p>Base de données géographique collaborative utilisée pour :
+- Voirie
+- Bâtiments
+- Points d’intérêt
+- Réseau routier</p>
+<h2 id="format_1">Format</h2>
+<ul>
+<li>.osm</li>
+<li>.pbf</li>
+<li>Shapefile après extraction</li>
+</ul>
+<h2 id="usage_1">Usage</h2>
+<ul>
+<li>Fond cartographique</li>
+<li>Analyse réseau (isochrones, calcul d’itinéraire)</li>
+<li>Croisement avec les lignes TADAO</li>
+</ul>
+<h2 id="source">Source</h2>
+<p>https://www.openstreetmap.org</p>
+<hr />
+<h1 id="3-donnees-ign-bd-topo-bd-ortho">3. Données IGN (BD TOPO / BD ORTHO)</h1>
+<h2 id="description_2">Description</h2>
+<p>Données de référence produites par l’IGN :
+- Réseau routier précis
+- Bâtiments
+- Limites administratives
+- Orthophotographies</p>
+<h2 id="format_2">Format</h2>
+<ul>
+<li>Shapefile</li>
+<li>GeoPackage</li>
+<li>WMS/WFS</li>
+</ul>
+<h2 id="usage_2">Usage</h2>
+<ul>
+<li>Référentiel spatial officiel</li>
+<li>Contrôle qualité des données OSM</li>
+<li>Production cartographique institutionnelle</li>
+</ul>
+<h2 id="producteur">Producteur</h2>
+<p>Institut national de l'information géographique et forestière (IGN)</p>
+<hr />
+<h1 id="4-donnees-internes-tadao">4. Données internes TADAO</h1>
+<h2 id="description_3">Description</h2>
+<p>Données produites en interne :
+- Tracés réels des lignes
+- Localisation des arrêts terrain
+- Données d’exploitation
+- Points de montée/descente
+- Données billettiques (si accessibles)</p>
+<h2 id="format_3">Format</h2>
+<ul>
+<li>CSV</li>
+<li>Excel</li>
+<li>Base PostgreSQL/PostGIS</li>
+<li>Shapefile</li>
+</ul>
+<h2 id="usage_3">Usage</h2>
+<ul>
+<li>Analyse de fréquentation</li>
+<li>Optimisation de lignes</li>
+<li>Études de performance réseau</li>
+<li>Tableaux de bord</li>
+</ul>
+<h2 id="sensibilite">Sensibilité</h2>
+<p>Données internes – diffusion restreinte</p>
+<hr />
+<h1 id="5-limites-administratives-insee-ign">5. Limites administratives (INSEE / IGN)</h1>
+<h2 id="description_4">Description</h2>
+<ul>
+<li>Communes</li>
+<li>IRIS</li>
+<li>EPCI</li>
+<li>Découpages statistiques</li>
+</ul>
+<h2 id="format_4">Format</h2>
+<ul>
+<li>Shapefile</li>
+<li>GeoJSON</li>
+</ul>
+<h2 id="usage_4">Usage</h2>
+<ul>
+<li>Analyse territoriale</li>
+<li>Études de couverture réseau</li>
+<li>Statistiques par commune</li>
+</ul>
+<hr />
+<h1 id="6-donnees-gps-saeiv">6. Données GPS / SAEIV</h1>
+<h2 id="description_5">Description</h2>
+<p>Données issues des véhicules :
+- Position temps réel
+- Retards
+- Temps de parcours réel</p>
+<h2 id="format_5">Format</h2>
+<ul>
+<li>API</li>
+<li>Base SQL</li>
+<li>Flux temps réel</li>
+</ul>
+<h2 id="usage_5">Usage</h2>
+<ul>
+<li>Analyse ponctualité</li>
+<li>Étude vitesse commerciale</li>
+<li>Optimisation exploitation</li>
+<li>Cartographie temps réel</li>
+</ul>
+<hr />
+<h1 id="7-modele-de-donnees-postgis">7. Modèle de données PostGIS</h1>
+<h2 id="description_6">Description</h2>
+<p>Base de données spatiale centralisée utilisée pour :
+- Stockage des couches SIG
+- Jointures spatiales
+- Requêtes SQL géographiques</p>
+<h2 id="technologies">Technologies</h2>
+<ul>
+<li>PostgreSQL</li>
+<li>PostGIS</li>
+</ul>
+<h2 id="usage_6">Usage</h2>
+<ul>
+<li>Backend cartographique</li>
+<li>API géospatiale</li>
+<li>Traitement automatique Python</li>
+</ul>
+<hr />
+<h1 id="architecture-du-site">Architecture du site</h1>
+<p>Guide utilisateur<br />
+└── Sources de données TADAO<br />
+    ├── GTFS<br />
+    ├── OSM<br />
+    ├── IGN<br />
+    ├── Données internes<br />
+    ├── Limites administratives<br />
+    ├── GPS / SAEIV<br />
+    └── PostGIS  </p>
+<hr />
+<h1 id="auteur">Auteur</h1>
+<p>Service géomatique – TADAO<br />
+Technicien / Chef de projet en géomatique</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../ign/" class="btn btn-neutral float-left" title="Présentation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../ign/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

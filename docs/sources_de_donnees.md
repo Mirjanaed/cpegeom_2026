@@ -7,9 +7,9 @@ Chaque sous-section correspond à une source de données exploitable dans les pr
 
 ---
 
-# 1. Base GTFS (General Transit Feed Specification)
+## 1. Base GTFS (General Transit Feed Specification)
 
-## Description
+### Description
 La base GTFS contient l’ensemble des données théoriques du réseau de transport :
 - Lignes
 - Arrêts
@@ -17,41 +17,41 @@ La base GTFS contient l’ensemble des données théoriques du réseau de transp
 - Calendriers de circulation
 - Correspondances
 
-## Format
+### Format
 - Fichiers texte (.txt)
 - Structuration normalisée (stops.txt, routes.txt, trips.txt, stop_times.txt…)
 
-## Usage
+### Usage
 - Intégration dans SIG (QGIS / ArcGIS)
 - Analyse d’accessibilité
 - Cartographie des lignes
 - Développement d’applications web de mobilité
 
-## Fréquence de mise à jour
+### Fréquence de mise à jour
 Selon les changements d’offre (nouveaux horaires, nouvelles lignes, adaptations saisonnières)
 
 ---
 
-# 2. Données OpenStreetMap (OSM)
+## 2. Données OpenStreetMap (OSM)
 
-## Description
+### Description
 Base de données géographique collaborative utilisée pour :
 - Voirie
 - Bâtiments
 - Points d’intérêt
 - Réseau routier
 
-## Format
+### Format
 - .osm
 - .pbf
 - Shapefile après extraction
 
-## Usage
+### Usage
 - Fond cartographique
 - Analyse réseau (isochrones, calcul d’itinéraire)
 - Croisement avec les lignes TADAO
 
-## Source
+### Source
 https://www.openstreetmap.org
 
 ---
