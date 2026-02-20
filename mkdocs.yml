@@ -1,31 +1,38 @@
-site_name : Site de documentation CPGEOM
-theme :
-    name : readthedocs
-    
 site_name: Documentation SIG TADAO
+site_url: https://www.tadao.fr/fr/  # tu peux remplacer par ton URL
+site_description: Documentation SIG TADAO
 
 nav:
   - Guide utilisateur: index.md
-
   - Présentation du projet: presentation.md
-
   - Sources de données:
       - GTFS: gtfs.md
       - OpenStreetMap: osm.md
       - IGN: ign.md
       - Données internes: donnees_internes.md
       - GPS / SAEIV: gps.md
-
   - Traitement des données:
       - Nettoyage: nettoyage.md
       - Intégration PostGIS: postgis.md
-
   - Analyses:
       - Accessibilité: accessibilite.md
       - Performance réseau: performance.md
       - Isochrones: isochrones.md
-
   - Architecture technique:
       - Base PostgreSQL/PostGIS: base.md
       - Scripts Python: python.md
       - Visualisation cartographique: visualisation.md
+
+theme:
+  name: material
+  palette:
+    primary: 'yellow'
+    accent: 'black'
+  font:
+    text: 'Roboto'        # ou autre police Google Fonts élégante
+    code: 'Fira Code'
+  logo: https://tse1.mm.bing.net/th/id/OIP.4XRPWAaZ8kjhJ_WlWIG11AAAAA?rs=1&pid=ImgDetMain&o=7&rm=3
+  favicon: https://tse1.mm.bing.net/th/id/OIP.4XRPWAaZ8kjhJ_WlWIG11AAAAA?rs=1&pid=ImgDetMain&o=7&rm=3
+
+extra_css:
+  - css/custom.css

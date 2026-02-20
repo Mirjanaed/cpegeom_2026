@@ -1,0 +1,8 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.md-header, .md-footer {
+    background-color: #000000; /* noir pour header/footer */
+    color: #FFD700;            /* jaune doré pour le texte */
+}
