@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>GTFS - Documentation SIG TADAO</title>
+    <title>Scripts Python - Documentation SIG TADAO</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "GTFS";
-        var mkdocs_page_input_path = "gtfs.md";
+        var mkdocs_page_name = "Scripts Python";
+        var mkdocs_page_input_path = "python.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -48,20 +48,8 @@
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">Sources de données</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">GTFS</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#general-transit-feed-specification">General Transit Feed Specification</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#contenu">Contenu</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#format">Format</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#utilisation">Utilisation</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gtfs/">GTFS</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../osm/">OpenStreetMap</a>
                   </li>
@@ -89,10 +77,16 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Architecture technique</span></p>
-              <ul>
+              <ul class="current">
                   <li class="toctree-l1"><a class="" href="../base.md">Base PostgreSQL/PostGIS</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../python/">Scripts Python</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Scripts Python</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#objectif">Objectif</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#utilisation">Utilisation</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../visualisation/">Visualisation cartographique</a>
                   </li>
@@ -111,8 +105,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Sources de données</li>
-      <li class="breadcrumb-item active">GTFS</li>
+          <li class="breadcrumb-item">Architecture technique</li>
+      <li class="breadcrumb-item active">Scripts Python</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -121,32 +115,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="gtfs">GTFS</h1>
-<h2 id="general-transit-feed-specification">General Transit Feed Specification</h2>
-<p>La base GTFS constitue la donnée principale du réseau.</p>
-<h3 id="contenu">Contenu</h3>
+                <h1 id="scripts-python">Scripts Python</h1>
+<h2 id="objectif">Objectif</h2>
+<p>Automatiser les traitements de données.</p>
+<h2 id="utilisation">Utilisation</h2>
 <ul>
-<li>routes.txt (lignes)</li>
-<li>stops.txt (arrêts)</li>
-<li>trips.txt (trajets)</li>
-<li>stop_times.txt (horaires)</li>
-<li>calendar.txt (jours de circulation)</li>
-</ul>
-<h3 id="format">Format</h3>
-<p>Archive .zip contenant des fichiers texte normalisés.</p>
-<h3 id="utilisation">Utilisation</h3>
-<ul>
-<li>Cartographie des lignes</li>
-<li>Analyse d’accessibilité</li>
-<li>Intégration dans PostGIS</li>
-<li>Applications web mobilité</li>
+<li>Import GTFS</li>
+<li>Nettoyage des données</li>
+<li>Requêtes PostGIS</li>
+<li>Génération de couches GeoJSON</li>
 </ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../presentation/" class="btn btn-neutral float-left" title="Présentation du projet"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../osm/" class="btn btn-neutral float-right" title="OpenStreetMap">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../isochrones/" class="btn btn-neutral float-left" title="Isochrones"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../visualisation/" class="btn btn-neutral float-right" title="Visualisation cartographique">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -169,10 +153,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../presentation/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../isochrones/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../osm/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../visualisation/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
