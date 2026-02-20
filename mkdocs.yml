@@ -1,10 +1,6 @@
 site_name : Site de documentation CPGEOM
 theme :
     name : readthedocs
-     palette:
-    - scheme: default
-      primary: teal
-      accent: deep orange
     
 site_name: Documentation SIG TADAO
 
