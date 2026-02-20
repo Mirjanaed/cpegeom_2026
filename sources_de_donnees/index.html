@@ -56,6 +56,30 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#sources-de-donnees-tadao">Sources de données – TADAO</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#1-base-gtfs-general-transit-feed-specification">1. Base GTFS (General Transit Feed Specification)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#format">Format</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#frequence-de-mise-a-jour">Fréquence de mise à jour</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-donnees-openstreetmap-osm">2. Données OpenStreetMap (OSM)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_1">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#format_1">Format</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage_1">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#source">Source</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                 </li>
               </ul>
@@ -87,49 +111,49 @@
 <p>Ce document présente les différentes sources de données utilisées dans le cadre des projets SIG et géomatiques du réseau TADAO (Artois Mobilités).</p>
 <p>Chaque sous-section correspond à une source de données exploitable dans les projets cartographiques, analyses spatiales et applications web.</p>
 <hr />
-<h1 id="1-base-gtfs-general-transit-feed-specification">1. Base GTFS (General Transit Feed Specification)</h1>
-<h2 id="description">Description</h2>
+<h2 id="1-base-gtfs-general-transit-feed-specification">1. Base GTFS (General Transit Feed Specification)</h2>
+<h3 id="description">Description</h3>
 <p>La base GTFS contient l’ensemble des données théoriques du réseau de transport :
 - Lignes
 - Arrêts
 - Horaires planifiés
 - Calendriers de circulation
 - Correspondances</p>
-<h2 id="format">Format</h2>
+<h3 id="format">Format</h3>
 <ul>
 <li>Fichiers texte (.txt)</li>
 <li>Structuration normalisée (stops.txt, routes.txt, trips.txt, stop_times.txt…)</li>
 </ul>
-<h2 id="usage">Usage</h2>
+<h3 id="usage">Usage</h3>
 <ul>
 <li>Intégration dans SIG (QGIS / ArcGIS)</li>
 <li>Analyse d’accessibilité</li>
 <li>Cartographie des lignes</li>
 <li>Développement d’applications web de mobilité</li>
 </ul>
-<h2 id="frequence-de-mise-a-jour">Fréquence de mise à jour</h2>
+<h3 id="frequence-de-mise-a-jour">Fréquence de mise à jour</h3>
 <p>Selon les changements d’offre (nouveaux horaires, nouvelles lignes, adaptations saisonnières)</p>
 <hr />
-<h1 id="2-donnees-openstreetmap-osm">2. Données OpenStreetMap (OSM)</h1>
-<h2 id="description_1">Description</h2>
+<h2 id="2-donnees-openstreetmap-osm">2. Données OpenStreetMap (OSM)</h2>
+<h3 id="description_1">Description</h3>
 <p>Base de données géographique collaborative utilisée pour :
 - Voirie
 - Bâtiments
 - Points d’intérêt
 - Réseau routier</p>
-<h2 id="format_1">Format</h2>
+<h3 id="format_1">Format</h3>
 <ul>
 <li>.osm</li>
 <li>.pbf</li>
 <li>Shapefile après extraction</li>
 </ul>
-<h2 id="usage_1">Usage</h2>
+<h3 id="usage_1">Usage</h3>
 <ul>
 <li>Fond cartographique</li>
 <li>Analyse réseau (isochrones, calcul d’itinéraire)</li>
 <li>Croisement avec les lignes TADAO</li>
 </ul>
-<h2 id="source">Source</h2>
+<h3 id="source">Source</h3>
 <p>https://www.openstreetmap.org</p>
 <hr />
 <h1 id="3-donnees-ign-bd-topo-bd-ortho">3. Données IGN (BD TOPO / BD ORTHO)</h1>
