@@ -24,7 +24,7 @@ nav:
       - Visualisation cartographique: visualisation.md
 
 theme:
-  name: material
+  name: readthedocs
   palette:
     primary: 'yellow'
     accent: 'black'
