@@ -1,11 +1,10 @@
 site_name : Site de documentation CPGEOM
-theme:
-  name: material
-  features:
-    - navigation.tabs
-    - navigation.sections
-    - content.code.copy
-    - navigation.top
+theme :
+    name : readthedocs
+     palette:
+    - scheme: default
+      primary: teal
+      accent: deep orange
     
 site_name: Documentation SIG TADAO
 
