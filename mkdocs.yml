@@ -1,3 +1,31 @@
 site_name : Site de documentation CPGEOM
 theme :
     name : readthedocs
+    
+site_name: Documentation SIG TADAO
+
+nav:
+  - Guide utilisateur: index.md
+
+  - Présentation du projet: presentation.md
+
+  - Sources de données:
+      - GTFS: gtfs.md
+      - OpenStreetMap: osm.md
+      - IGN: ign.md
+      - Données internes: donnees_internes.md
+      - GPS / SAEIV: gps.md
+
+  - Traitement des données:
+      - Nettoyage: nettoyage.md
+      - Intégration PostGIS: postgis.md
+
+  - Analyses:
+      - Accessibilité: accessibilite.md
+      - Performance réseau: performance.md
+      - Isochrones: isochrones.md
+
+  - Architecture technique:
+      - Base PostgreSQL/PostGIS: base.md
+      - Scripts Python: python.md
+      - Visualisation cartographique: visualisation.md
