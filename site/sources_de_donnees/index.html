@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Guide utilisateur - Site de documentation CPGEOM</title>
+    <title>Guide utilisateur - Documentation SIG TADAO</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -30,7 +30,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Site de documentation CPGEOM
+          <a href=".." class="icon icon-home"> Documentation SIG TADAO
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -40,62 +40,50 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="..">Acceuil de mon site super cool</a>
+                <li class="toctree-l1"><a class="reference internal" href="..">Guide utilisateur</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../bd_topo/">Bd topo</a>
+                <li class="toctree-l1"><a class="" href="../presentation.md">Présentation du projet</a>
                 </li>
               </ul>
+              <p class="caption"><span class="caption-text">Sources de données</span></p>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../gtfs/">Gtfs</a>
-                </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../gtfs/">GTFS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../osm.md">OpenStreetMap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ign/">IGN</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../donnees_internes.md">Données internes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../gps.md">GPS / SAEIV</a>
+                  </li>
               </ul>
+              <p class="caption"><span class="caption-text">Traitement des données</span></p>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../gtfs2/">Gtfs2</a>
-                </li>
+                  <li class="toctree-l1"><a class="" href="../nettoyage.md">Nettoyage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../postgis.md">Intégration PostGIS</a>
+                  </li>
               </ul>
+              <p class="caption"><span class="caption-text">Analyses</span></p>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../ign/">Présentation</a>
-                </li>
+                  <li class="toctree-l1"><a class="" href="../accessibilite.md">Accessibilité</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../performance.md">Performance réseau</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../isochrones.md">Isochrones</a>
+                  </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Guide utilisateur</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#sources-de-donnees-tadao">Sources de données – TADAO</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#donnees-exterieures">Données extérieures</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#donnees-openstreetmap-osm">Données OpenStreetMap (OSM)</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#une-carte-simple">Une carte simple</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#donnees-ign-bd-topo-bd-ortho">Données IGN (BD TOPO / BD ORTHO)</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#analyse-avancee">Analyse avancée</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#donnees-internes-tadao">Données internes TADAO</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#carte-temps-reel">Carte temps réel</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#donnees-gps-saeiv">Données GPS / SAEIV</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#base-technique">Base technique</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#base-de-donnees-postgis">Base de données PostGIS</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                </li>
+              <p class="caption"><span class="caption-text">Architecture technique</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../base.md">Base PostgreSQL/PostGIS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../python.md">Scripts Python</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../visualisation.md">Visualisation cartographique</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -104,7 +92,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Site de documentation CPGEOM</a>
+          <a href="..">Documentation SIG TADAO</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -211,9 +199,6 @@ Technicien / Chef de projet en géomatique</p>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../ign/" class="btn btn-neutral float-left" title="Présentation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-    </div>
 
   <hr/>
 
@@ -234,8 +219,6 @@ Technicien / Chef de projet en géomatique</p>
   <div class="rst-versions" role="note" aria-label="Versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
     
-    
-      <span><a href="../ign/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
   </span>
